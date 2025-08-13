@@ -1,0 +1,24 @@
+# .NET
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.log
+*.db
+*.DS_Store
+.vs/
+TestResults/
+*.swp
+*.tmp
+*.bak
+*.ncb
+*.cache
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.vscode/
+# Optional: exclude launchSettings.json if only for local dev
+# Shopkeeper.API/ShopKeeper.API/Properties/launchSettings.json
