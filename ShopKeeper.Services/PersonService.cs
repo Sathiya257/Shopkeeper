@@ -26,12 +26,16 @@ public class PersonService
         // Fetch all persons from the MongoDB collection
         try
         {
-            return await _personCollection.Find(person => true).ToListAsync();
-        }
-        catch (System.Exception )
-        {
-            
-            throw ;
+            //_personCollection.InsertOne(new Person { Name = "Sathiya", Age = 34, Gender = "male" });
+            var persons = await _personCollection.Find(_=>true).ToListAsync();
+        Console.WriteLine($"Fetched {persons.Count} persons from the database.");
+        Console.WriteLine($"{_personCollection.CollectionNamespace.CollectionName} Collection Name");
+        return persons;
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Error fetching persons: {ex.Message}");
+        throw;
         }
         
     }
